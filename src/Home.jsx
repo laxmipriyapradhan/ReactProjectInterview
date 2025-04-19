@@ -1,4 +1,4 @@
-import React, {useeffect , useState} from "react";
+import React, {useEffect , useState} from "react";
 import axios from "axios";
 import  {useDispatch} from "react-redux";
 import  {addToCart} from "./redux/cartSlice";
@@ -7,8 +7,8 @@ import {Link} from "react-router-dom";
 const Home = () => {
      const [products, setProducts] = useState([]);
      const dispatch = useDispatch();
-     useeffect(() => {
-        axios.get("http://localhost:5173//products")
+     useEffect(() => {
+        axios.get("http://localhost:3000//products")
         .then((res) => {
             setProducts(res.data);
         })

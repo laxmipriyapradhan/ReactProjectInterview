@@ -1,4 +1,4 @@
-import React, {useeffect , useState} from "react";
+import React, {useEffect , useState} from "react";
 
 import axios from "axios";
 
@@ -7,15 +7,15 @@ const AdminDashborad = () => {
     const [users, setUsers] = useState([]);
     const [saerch, setSearch] = useState ('');
     const fetchUsers = ()=>{
-        axios.get("http://localhost:5173//users").then(res => setUsers(res.data));
+        axios.get("http://localhost:3000//users").then(res => setUsers(res.data));
     }
 
-    useeffect(() => {
+    useEffect(() => {
         fetchUsers
      },[]);
 
      const handleDelete = (id)=>{
-        axios.delete(`http://localhost:5173//users/${id}`).then (fetchUsers);
+        axios.delete(`http://localhost:3000//users/${id}`).then (fetchUsers);
 
      }
 
