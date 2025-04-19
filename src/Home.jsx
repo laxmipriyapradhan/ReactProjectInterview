@@ -8,7 +8,7 @@ const Home = () => {
      const [products, setProducts] = useState([]);
      const dispatch = useDispatch();
      useEffect(() => {
-        axios.get("http://localhost:3000//products")
+        axios.get("http://localhost:3000/products")
         .then((res) => {
             setProducts(res.data);
         })
